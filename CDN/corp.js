@@ -31,10 +31,10 @@ new WebpackDevServer(
     },
     historyApiFallback: true,
     proxy: [
-      {
-        path: '/meeting.html',
-        target: 'https://meet.infolive.digital/'
-      }
+      // {
+      //   path: '/meeting.html',
+      //   target: 'http://127.0.0.1:9998/'
+      // }
     ],
     static: './',
     allowedHosts: 'all'
