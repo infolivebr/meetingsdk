@@ -30,12 +30,12 @@ new WebpackDevServer(
       'Cross-Origin-Resource-Policy': 'cross-origin'
     },
     historyApiFallback: true,
-    // proxy: [
-      // {
-      //   path: '/meeting.html',
-      //   target: 'http://127.0.0.1:9998/'
-      // }
-    // ],
+    proxy: [
+      {
+        path: '/meeting.html',
+        target: 'https://meet.infolive.digital/'
+      }
+    ],
     static: './',
     allowedHosts: 'all'
   },
