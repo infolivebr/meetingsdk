@@ -11,14 +11,14 @@ function runFunc(err) {
   if (err) {
     console.log(err);
   }
-  console.log('Listening at http://meet.infolive.digital/index.html');
+  console.log('Listening at https://meet.infolive.digital/index.html');
 }
 
 new WebpackDevServer(
   {
     port: 9999,
     host: '0.0.0.0',
-    open: https ? 'https://meet.infolive.digital/' : 'http://meet.infolive.digital/',
+    open: https ? 'https://meet.infolive.digital/' : 'https://meet.infolive.digital/',
     server: {
       type: https ? 'https' : 'http',
       options: {
@@ -33,7 +33,7 @@ new WebpackDevServer(
     proxy: [
       {
         path: '/meeting.html',
-        target: 'http://meet.infolive.digital/'
+        target: 'https://meet.infolive.digital/'
       }
     ],
     static: './',
