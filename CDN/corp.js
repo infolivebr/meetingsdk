@@ -11,14 +11,14 @@ function runFunc(err) {
   if (err) {
     console.log(err);
   }
-  console.log('Listening at http://127.0.0.1:3300/index.html');
+  console.log('Listening at http://127.0.0.1:9999/index.html');
 }
 
 new WebpackDevServer(
   {
-    port: 3300,
+    port: 9999,
     host: '0.0.0.0',
-    open: https ? 'https://localhost:3300/' : 'http://127.0.0.1:3300/',
+    open: https ? 'https://localhost:9999/' : 'http://127.0.0.1:9999/',
     server: {
       type: https ? 'https' : 'http',
       options: {
@@ -40,7 +40,7 @@ new WebpackDevServer(
     allowedHosts: 'all'
   },
   webpack(webpackConfig)
-).start(3300, '0.0.0.0', runFunc);
+).start(9999, '0.0.0.0', runFunc);
 
 new WebpackDevServer(
   {
