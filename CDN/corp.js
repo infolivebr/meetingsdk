@@ -33,7 +33,7 @@ new WebpackDevServer(
     proxy: [
       {
         path: '/meeting.html',
-        target: 'http://meet.infolive.digital/'
+        target: 'http://127.0.0.1:9998/'
       }
     ],
     static: './',
